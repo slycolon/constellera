@@ -8,8 +8,7 @@ int begin()
 	
 	int choice;
 	
-	cout<<"welcome to constellera: the game" << endl << endl
-			<<"	0 - new game" << endl
+	cout<<"	0 - new game" << endl
 			<<"	1 - load game" << endl
 			<<"	2 - help" << endl
 			<<"	3 - exit" << endl << endl
