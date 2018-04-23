@@ -8,34 +8,40 @@ using namespace std;
 
 int main()
 {
-  int x;
-  bool endLoop = true;
-  cout<<"welcome to constellera: the game"<<endl<<endl;
-  
-  x = begin();
+	int x = 5;
+	bool endLoop = true;
+	cout<<"welcome to constellera: the game"<<endl<<endl;
 	
-  
+	
+  	
 	do
 	{
-  	if (x == 0)
-  	{
-  	  newGame();
-  	}
-  	else if (x == 1)
-  	{
-  	  loadGame();
-  	}
-  	else if (x == 2)
-  	{
-  	  help();
-  	}
-  	else if (x == 3)
-  	{
-  	  return 0;
-  	}
-  	else
+		x = begin();
+		
+  		if (x == 0)
+  		{
+  			newGame();
+			endLoop = true;
+  		}
+  		else if (x == 1)
+  		{
+  			loadGame();
+			endLoop = true;
+  		}
+  		else if (x == 2)
+  		{
+  			help();
+			endLoop = true;
+  		}
+  		else if (x == 3)
+  		{
+  			return 0;
+			endLoop = true;
+  		}
+  		else
 		{
 			cout<<"invalid. please try again.";
 			endLoop = false;
 		}
-}
+	} while (endLoop = false);
+	
