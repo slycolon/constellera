@@ -17,11 +17,44 @@ int begin()
 	cin >> choice;
 }
 
-int newGame()
+int newSave()
 {
 	ifstream savefile;
+	bool exitLoop = true;
+	int choice = 0;
 	
-	
+	do
+	{
+		cout<<"choose a file to save to (1-5)" << endl << endl << ">";
+		cin >> choice;
+		
+		switch (choice)
+		{
+			case 1:
+				savefile.open("save1.txt");
+				exitLoop = true;
+				break;
+			case 2:
+				savefile.open("save2.txt");
+				exitLoop = true;
+				break;
+			case 3:
+				savefile.open("save3.txt");
+				exitLoop = true;
+				break;
+			case 4:
+				savefile.open("save4.txt");
+				exitLoop = true;
+				break;
+			case 5:
+				savefile.open("save5.txt");
+				exitLoop = true;
+				break;
+			default:
+				cout<<"invalid. try again." << endl;
+				exitLoop = false;
+				break;
+		} while (exitLoop == false);
 }
 
 int loadGame()
