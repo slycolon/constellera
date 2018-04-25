@@ -20,7 +20,7 @@ int main()
 		
   		if (x == 0)
   		{
-  			newGame();
+  			directory = newSave();
 			endLoop = true;
   		}
   		else if (x == 1)
