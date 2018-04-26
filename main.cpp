@@ -3,6 +3,7 @@
 #include <fstream>
 #include <windows.h>
 #include 'begin.h'
+#include 'charactergen.h'
 
 using namespace std;
 
@@ -31,12 +32,12 @@ int main()
   		else if (x == 2)
   		{
   			help();
-			endLoop = true;
+			endLoop = false;
   		}
   		else if (x == 3)
   		{
   			return 0;
-			endLoop = true;
+			endLoop = false;
   		}
   		else
 		{
@@ -44,4 +45,13 @@ int main()
 			endLoop = false;
 		}
 	} while (endLoop = false);
+	
+	if (x == 0)
+	{
+		createCharacter(directory);
+	}
+	else if (x == 1)
+	{
+		loadCharacter(directory);
+	}
 	
