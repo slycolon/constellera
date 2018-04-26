@@ -17,16 +17,27 @@ int begin()
 	cin >> choice;
 }
 
+
+/* fu
+function: newSave
+purpose: 
+returns: directory save number
+*/
 int newSave()
 {
 	ifstream savefile;
+	int directory = 0;
+	char newChoice = 'a';
 	bool exitLoop = true;
+	bool exitInnerLoop = true;
 	int choice = 0;
+	int first = 0;
 	
 	do
 	{
 		cout<<"choose a file to save to (1-5)" << endl << endl << ">";
 		cin >> choice;
+		directory = choice;
 		
 		switch (choice)
 		{
@@ -54,7 +65,50 @@ int newSave()
 				cout<<"invalid. try again." << endl;
 				exitLoop = false;
 				break;
-		} while (exitLoop == false);
+		}
+		
+		savefile >> first;
+		
+		//8658
+		
+		if (first != 8658)
+		{
+			cout<<"this file already contains a save. would you like to overwrite it (y/n)?" << endl << endl << ">";
+			cin >> newChoice;
+			if (newChoice == 'n' || newChoice == 'N')
+			{
+				cout<<"alright then. ";
+				exitLoop = false;
+			}
+			else
+			{
+				cout<<"okay, since you didn't say no, i'm overwriting your old character file and" << endl
+					<<"saving your new character in file save" << directory << ".txt";
+				exitLoop = true;
+			}
+		}
+		else
+		{
+			cout<<"you have chosen to create a new save in file " << directory << ". is this correct (y/n)?"
+				<<endl<<endl<<">";
+			cin >> newChoice;
+			if (newChoice == 'n' || newChoice == 'N')
+			{
+				exitLoop = false;
+				cout<<"alright then. ";
+			}
+			else
+			{
+				cout<<"okay, since you didn't say no, i'm saving your new character in file save" << directory
+					<<".txt." << endl;
+				exitLoop = true;
+			}
+		}
+		
+	} while (exitLoop == false);
+		
+	savefile.close();
+	return directory;
 }
 
 int loadGame()
