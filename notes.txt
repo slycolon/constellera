@@ -1,0 +1,6 @@
+constellera notes - updated 04/27/2018
+
+order that statistics are in
+1. name
+2. description
+3. 
