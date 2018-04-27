@@ -5,6 +5,16 @@
 
 using namespace std;
 
+void readMessage(char display[])
+{
+	int length = display;
+	for (int x = 0; x < length; x++)
+	{
+		cout<<display[x];
+		sleep(50);
+	}
+}
+
 int begin()
 {
 	
@@ -162,6 +172,6 @@ void createCharacter(int directory)
 	}
 	
 	//actually start creating the character
-	
-	
+	string beginningOne = "";
+	readMessage(beginningOne);
 }
