@@ -3,6 +3,8 @@
 #include <windows.h>
 #include <fstream>
 
+using namespace std;
+
 int begin()
 {
 	
@@ -130,5 +132,36 @@ int loadGame()
 
 void help()
 {
+	
+}
+
+void createCharacter(int directory)
+{
+	ofstream saveto;
+	
+	switch(directory)
+	{
+		case 1:
+			saveto.open("saves/save1.txt");
+			break;
+		case 2:
+			saveto.open("saves/save2.txt");
+			break;
+		case 3:
+			saveto.open("saves/save3.txt");
+			break;
+		case 4:
+			saveto.open("saves/save4.txt");
+			break;
+		case 5:
+			saveto.open("saves/save5.txt");
+			break;
+		default:
+			saveto.open("saves/save1.txt");
+			
+	}
+	
+	//actually start creating the character
+	
 	
 }
