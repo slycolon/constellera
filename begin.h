@@ -54,23 +54,23 @@ int newSave()
 		switch (choice)
 		{
 			case 1:
-				savefile.open("save1.txt");
+				savefile.open("saves/save1.txt");
 				exitLoop = true;
 				break;
 			case 2:
-				savefile.open("save2.txt");
+				savefile.open("saves/save2.txt");
 				exitLoop = true;
 				break;
 			case 3:
-				savefile.open("save3.txt");
+				savefile.open("saves/save3.txt");
 				exitLoop = true;
 				break;
 			case 4:
-				savefile.open("save4.txt");
+				savefile.open("saves/save4.txt");
 				exitLoop = true;
 				break;
 			case 5:
-				savefile.open("save5.txt");
+				savefile.open("saves/save5.txt");
 				exitLoop = true;
 				break;
 			default:
@@ -135,9 +135,41 @@ int loadGame()
 		cin >> input;
 		switch (input)
 		{
-			
+			case 1:
+				saveFile.open("saves/save1.txt");
+				loopEnd = true;
+				
+				if (
+				
+				break;
+			case 2:
+				saveFile.open("saves/save2.txt");
+				loopEnd = true;
+				
+				break;
+			case 3:
+				saveFile.open("saves/save3.txt");
+				loopEnd = true;
+				
+				break;
+			case 4:
+				saveFile.open("saves/save4.txt");
+				loopEnd = true;
+				
+				break;
+			case 5:
+				saveFile.open("saves/save5.txt");
+				loopEnd = true;
+				
+				break;
+			default:
+				cout<<input << " is not a valid option. ";
+				loopEnd = false;
+				break;
 		}
 	} while (loopEnd == false);
+					
+					
 }
 
 void help()
